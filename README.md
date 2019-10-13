@@ -20,7 +20,7 @@
 ## Install
 ```sh
 git clone https://github.com/spagu/pp.git
-cd pp && make install
+cd pp && ./configure && make install
 ```
 
 ## Configuration
