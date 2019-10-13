@@ -1,0 +1,19 @@
+CC      = clang
+CFLAGS  = -g -Wall -Werror
+RM      = rm -f
+
+INCLUDE = -I/usr/local/include
+LDFLAGS = -L/usr/local/lib 
+LDLIBS = -lcurl
+
+SOURCES = pp.c
+OUT = pp
+default: all
+
+all: PushPanel
+
+PushPanel: pp.c
+	$(CC) -o $(OUT) $(INCLUDE) $(CFLAGS) $(LDFLAGS) $(LDLIBS) $(SOURCES)
+
+clean veryclean:
+	$(RM) pp
