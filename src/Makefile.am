@@ -1,5 +1,5 @@
 bin_PROGRAMS = pp
+
 pp_SOURCES = pp.c
-
-
-
+pp_CFLAGS = $(CURL_CFLAGS) $(JSON_CFLAGS)
+pp_LDFLAGS =$(CURL_LIBS) $(JSON_LIBS)
